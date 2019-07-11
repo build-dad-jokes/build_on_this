@@ -20,7 +20,7 @@ P.S: Since I spent time on this work, I might not have time tomorrow to make a m
 
 ### 1. Wallet & User Profile!
 
-I didn't add it to this version because I know Preston structured his server differently. I also made changes to the jokes model to have an object property `created_by` to show the user's username by the foreign key id. Look in my repository to see how I did it!
+I didn't add it to this version because I know Preston structured his server differently. I also made changes to the jokes model to have an object property `created_by` to show the user's username by the foreign key id. Look in my  server repository to see how I did it!
 
 The Wallet can be shown in a *user profile* because if you do a get request to a specific id, it returns the array of jokes created by the user. That's the joke wallet! Preston will structure this differently.
 
