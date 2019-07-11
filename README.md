@@ -30,9 +30,16 @@ We need a search function for the jokes. Here's a really good tutorial:
 
 It has auto complete and uses a package called react-select. Seems simple enough!
 
-### 3. STYLING~~~~~~~ WOOOAooaoOAOA
+### 3. Ability to edit jokes
+I wrote the logic in the actions. Just write a reducer for it and pull it from the store. You also have to render a button and possibly a modal form for it, whatever you like. 
 
-### 4. If you are up for it, a messaging function!
+### 4. Add a radio button or something to have state set the public state to true or false
+Just let the user have an option to have the joke public or not!
+
+### 5. STYLING~~~~~~~ WOOOAooaoOAOA ain't nobody got time fo dat
+I really don't.
+
+### 6. If you are up for it, a messaging function!
 
 I haven't created an example structure yet, but the design I had in mind was:
 
