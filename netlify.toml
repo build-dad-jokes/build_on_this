@@ -1,4 +1,2 @@
 [build]
-  command = "npm start"
-  publish = "/public"
-  DEPLOY_PRIME_URL: "bw-dad-jokes"
+  command = "npm run build"
