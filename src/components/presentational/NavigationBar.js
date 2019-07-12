@@ -17,13 +17,13 @@ export class NavigationBar extends Component {
     render() {
 
       const userLinks = (
-        <ul>
-          <li><a href="#" onClick={this.logout}>Logout</a></li>
-          <li><Link to="/welcome">Jokes</Link></li>
-          <li><Link to="/users">User List</Link></li>
-          <li><Link to="/add-joke">Add Joke</Link></li>
-    
-        </ul>
+        <nav>
+          <a><a href="#" onClick={this.logout}>Logout</a></a>
+          <a><Link to="/welcome">Jokes</Link></a>
+          <a><Link to="/users">User List</Link></a>
+          <a><Link to="/add-joke">Add Joke</Link></a>
+          <SearchBar />
+        </nav>
       );
   
       const guestLinks = (
