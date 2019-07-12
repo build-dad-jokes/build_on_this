@@ -35,7 +35,9 @@ export class SavedJokes extends Component {
 
 function mapStateToProps(state) {
   console.log(state);
-  return state.auth;
+  return {
+    savedJokes: state.savedJokes.jokes
+  };
 }
 export default connect(
   mapStateToProps,

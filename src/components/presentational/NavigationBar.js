@@ -17,11 +17,6 @@ export class NavigationBar extends Component {
     const userLinks = (
       <ul>
         <li>
-          <a href="#" onClick={this.logout}>
-            Logout
-          </a>
-        </li>
-        <li>
           <Link to="/welcome">Jokes</Link>
         </li>
         <li>
@@ -32,6 +27,11 @@ export class NavigationBar extends Component {
         </li>
         <li>
           <Link to="/saved-jokes">Saved Jokes</Link>
+        </li>
+        <li>
+          <a href="#" onClick={this.logout}>
+            Logout
+          </a>
         </li>
       </ul>
     );
