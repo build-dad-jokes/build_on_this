@@ -48,6 +48,21 @@ export class AddJoke extends Component {
                 onChange={this.onChange}
               />
             </div>
+
+            <div className="public-toggle">
+                  <div className="radio">
+                <label>
+                 <input type="radio" value="option1" />
+                 Public
+               </label>
+              </div>
+              <div className="radio">
+                <label>
+                  <input type="radio" value="option2" />
+                  Private
+                </label>
+              </div>
+            </div>
             
             <div className="form-group">
               <button className="btn btn-primary btn-lg">Add Joke</button>

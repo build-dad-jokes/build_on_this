@@ -40,7 +40,7 @@ export class LoginForm extends Component {
         name="username" 
         value={username} 
         onChange={this.onChange} 
-        placeholder="password" 
+        placeholder="username" 
       />
     </div>
     <div className="form-group">
