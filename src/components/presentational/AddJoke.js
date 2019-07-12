@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addJoke } from '../../actions';
 import { withRouter } from 'react-router-dom';
-
+import './styles.css'
 
 export class AddJoke extends Component {
     state = {

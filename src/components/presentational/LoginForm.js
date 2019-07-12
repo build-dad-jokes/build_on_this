@@ -4,7 +4,7 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { loginUser, logout } from '../../actions';
-
+import './styles.css'
 
 export class LoginForm extends Component {
     state = {

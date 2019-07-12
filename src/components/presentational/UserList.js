@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import User from './User';
-
+import './styles.css'
 
 export default class UserList extends Component {
     render() {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { registerUser } from '../../actions';
 import { withRouter } from 'react-router-dom';
-
+import './styles.css'
 
 export class Register extends Component {
     state = {
