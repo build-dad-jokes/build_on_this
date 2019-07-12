@@ -8,7 +8,6 @@ form {
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    overflow: hidden;
     border: 1px solid #d4f5f5;
     border-width: 0px 200px;
     box-shadow:10px 10px 10px 2px rgba(0,0,0,0.2);
