@@ -61,10 +61,12 @@ p{
 
 nav {
     text-align: center;
+    margin-top: 10px;
 }
 
 a {
     margin-left: 20px;
+    font-size: 20px;
     text-decoration: none;
     color: #476A6F;
 }
@@ -123,7 +125,7 @@ input {
     padding: 20px;
 }
 
-.row{
+.row {
     display: flex; 
     justify-content: center;
 }
