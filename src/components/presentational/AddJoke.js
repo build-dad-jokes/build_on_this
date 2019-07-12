@@ -1,27 +1,26 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { addJoke } from '../../actions';
-import { withRouter } from 'react-router-dom';
-
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { addJoke } from "../../actions";
+import { withRouter } from "react-router-dom";
+import "./styles.css";
 
 export class AddJoke extends Component {
-    state = {
-      question: '',
-      answer: '',
-      user_id: this.props.currentUser.subject
-    };
+  state = {
+    joke: "",
+    punchline: "",
+    user_id: this.props.currentUser.subject
+  };
 
-  onChange = (e) => {
+  onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
-  }
+  };
 
-  onSubmit = (e) => {
+  onSubmit = e => {
     e.preventDefault();
     console.log(this.props.currentUser.subject);
     this.props.addJoke(this.state);
-    this.props.history.push('/welcome');
-
-  }
+    this.props.history.push("/welcome");
+  };
 
   render() {
     return (
@@ -30,25 +29,20 @@ export class AddJoke extends Component {
           <form onSubmit={this.onSubmit}>
             <h1>Add a Joke</h1>
             <div className="form-group">
-              <label htmlFor="question">Question:</label>
-              <input
-                type="text"
-                name="question"
-                value={this.state.question}
-                onChange={this.onChange}
-              />
+              <label htmlFor="question">Joke:</label>
+              <input type="text" name="Joke" value={this.state.question} onChange={this.onChange} />
             </div>
 
             <div className="form-group">
-              <label htmlFor="answer">Answer:</label>
+              <label htmlFor="answer">Punchline:</label>
               <input
                 type="text"
-                name="answer"
+                name="Punchline"
                 value={this.state.answer}
                 onChange={this.onChange}
               />
             </div>
-            
+
             <div className="form-group">
               <button className="btn btn-primary btn-lg">Add Joke</button>
             </div>
@@ -59,9 +53,13 @@ export class AddJoke extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return state.auth;
+};
 
-const mapStateToProps = (state) => {
-  return state.auth
-}
-
-export default withRouter(connect(mapStateToProps, { addJoke })(AddJoke));
+export default withRouter(
+  connect(
+    mapStateToProps,
+    { addJoke }
+  )(AddJoke)
+);

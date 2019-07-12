@@ -1,24 +1,24 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { registerUser } from '../../actions';
-import { withRouter } from 'react-router-dom';
-
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { registerUser } from "../../actions";
+import { withRouter } from "react-router-dom";
+import "./styles.css";
 
 export class Register extends Component {
-    state = {
-      username: '',
-      password: ''
-    };
+  state = {
+    username: "",
+    password: ""
+  };
 
-  onChange = (e) => {
+  onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
-  }
+  };
 
-  onSubmit = (e) => {
+  onSubmit = e => {
     e.preventDefault();
     this.props.registerUser(this.state);
-    this.props.history.push('/login');
-  }
+    this.props.history.push("/login");
+  };
 
   render() {
     return (
@@ -45,7 +45,7 @@ export class Register extends Component {
                 onChange={this.onChange}
               />
             </div>
-            
+
             <div className="form-group">
               <button className="btn btn-primary btn-lg">Register</button>
             </div>
@@ -57,7 +57,12 @@ export class Register extends Component {
 }
 
 const mapStateToProps = state => {
-  return state.auth
-}
+  return state.auth;
+};
 
-export default withRouter(connect(mapStateToProps, { registerUser })(Register));
+export default withRouter(
+  connect(
+    mapStateToProps,
+    { registerUser }
+  )(Register)
+);

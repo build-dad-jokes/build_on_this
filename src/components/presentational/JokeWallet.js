@@ -1,14 +1,19 @@
 import React, { Component } from "react";
+import { fetchSavedJokes } from "../../actions";
 import { connect } from "react-redux";
-import { deleteJoke } from "../../actions";
 import Joke from "./Joke";
+
 import "./styles.css";
 
-export class Jokes extends Component {
+export class SavedJokes extends Component {
+  componentDidMount() {
+    this.props.fetchSavedJokes();
+  }
+
   render() {
     return (
-      <div className="jokes-list">
-        <h1>JOKES FROM YA DADDY</h1>
+      <div>
+        <h1>Saved Jokes</h1>
         <ul>
           {this.props.jokes.map(joke => {
             return (
@@ -28,10 +33,13 @@ export class Jokes extends Component {
 }
 
 const mapStateToProps = state => {
-  return state.auth;
+  console.log(state);
+  return {
+    savedJokes: state.jokes.joke,
+    auth: state.auth
+  };
 };
-
 export default connect(
   mapStateToProps,
-  { deleteJoke }
-)(Jokes);
+  { fetchSavedJokes }
+)(SavedJokes);

@@ -18,7 +18,7 @@ export const fetchAllUsers = () => dispatch => {
     .then(res => {
       dispatch({
         type: FETCH_USERS_SUCCESS,
-        payload: res.data.users
+        payload: res.data
       });
     })
     .catch(err =>

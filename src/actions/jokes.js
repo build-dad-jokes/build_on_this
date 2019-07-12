@@ -24,6 +24,10 @@ export const DELETE_JOKE_START = "DELETE_JOKE_START";
 export const DELETE_JOKE_SUCCESS = "DELETE_JOKE_SUCCESS";
 export const DELETE_JOKE_FAILURE = "DELETE_JOKE_FAILURE";
 
+export const FETCH_SAVEDJOKES_START = "FETCH_SAVEDJOKES_START";
+export const FETCH_SAVEDJOKES_SUCCESS = "FETCH_SAVEDJOKES_SUCCESS";
+export const FETCH_SAVEDJOKES_FAILURE = "FETCH_SAVEDJOKES_FAILURE";
+
 const BASE_URL = "https://dad-jokes-bw.herokuapp.com";
 
 export const fetchJokeById = id => dispatch => {
@@ -150,4 +154,22 @@ export const deleteJoke = id => dispatch => {
         payload: err
       })
     );
+};
+
+export const fetchSavedJokes = () => dispatch => {
+  dispatch({ type: FETCH_SAVEDJOKES_START });
+  const sendToken = {
+    headers: { authorization: localStorage.getItem("jwt") }
+  };
+  axios.get(`${BASE_URL}/api/users/:id/savedJokes`, sendToken).then(res => {
+    dispatch({
+      type: FETCH_SAVEDJOKES_SUCCESS,
+      payload: res.data
+    }).catch(error =>
+      dispatch({
+        type: FETCH_SAVEDJOKES_FAILURE,
+        payload: error
+      })
+    );
+  });
 };
