@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Select } from 'react-select'
 import './styles.css';
 
 export class SearchBar extends Component {
