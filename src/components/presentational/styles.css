@@ -6,11 +6,14 @@ form {
 }
 
 body {
-    background: #D4F5F5;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     overflow: hidden;
+    border: 1px solid #d4f5f5;
+    border-width: 0px 200px;
+    box-shadow:10px 10px 10px 2px rgba(0,0,0,0.2);
 }
+
 
 form {
     padding: 20px;
@@ -61,7 +64,6 @@ p{
 
 nav {
     text-align: center;
-    margin-top: 10px;
 }
 
 a {
@@ -109,8 +111,7 @@ button:active {
 }
 
 .jokes-list{
-    display: flex;
-    justify-content: center;
+
 }
 
 .searchbar{
@@ -128,4 +129,10 @@ input {
 .row {
     display: flex; 
     justify-content: center;
+}
+
+.jokes{
+display: flex;
+flex-direction: column;
+margin-left: 300px;
 }

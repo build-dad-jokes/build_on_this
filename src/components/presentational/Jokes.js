@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 import { deleteJoke } from '../../actions';
 import Joke from './Joke';
 import './styles.css'
-import PublicToggle from './PublicToggle';
+
 
 export class Jokes extends Component {
     render() {
       return (
         <div className="jokes-list">
           <h1>JOKES FROM YA DADDY</h1>
-          <ul>
+          <ul className="jokes">
             {this.props.jokes.map(joke => {
               return (
                 <Joke
