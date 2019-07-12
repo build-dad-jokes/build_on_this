@@ -11,11 +11,12 @@ export class SavedJokes extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <div>
         <h1>Saved Jokes</h1>
         <ul>
-          {this.props.jokes.map(joke => {
+          {this.props.savedJokes.map(joke => {
             return (
               <Joke
                 question={joke.joke}
@@ -32,13 +33,10 @@ export class SavedJokes extends Component {
   }
 }
 
-const mapStateToProps = state => {
+function mapStateToProps(state) {
   console.log(state);
-  return {
-    savedJokes: state.jokes.joke,
-    auth: state.auth
-  };
-};
+  return state.auth;
+}
 export default connect(
   mapStateToProps,
   { fetchSavedJokes }
