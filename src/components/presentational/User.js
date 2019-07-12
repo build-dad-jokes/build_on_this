@@ -1,6 +1,7 @@
 import React from 'react';
 import {deleteUser} from '../../actions';
 import { connect } from 'react-redux';
+import './styles.css'
 
 const User = props => {
     return (

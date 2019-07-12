@@ -5,7 +5,8 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { logout } from '../../actions';
 import { withRouter } from 'react-router-dom';
-
+import './styles.css'
+import SearchBar from './SearchBar'
 
 export class NavigationBar extends Component {
     logout = (e) => {
@@ -26,18 +27,21 @@ export class NavigationBar extends Component {
       );
   
       const guestLinks = (
-          <ul>
-            <li><Link to="/register">Register</Link></li>
-            <li><Link to="/login">Login</Link></li>
-          </ul>
+          <nav>
+            <a><Link to="/" >Home</Link></a>
+            <a><Link to="/register">Register</Link></a>
+            <a><Link to="/login">Login</Link></a>
+            <SearchBar />
+    
+          </nav>
       );
   
       return (
           <nav>
             <div className="container-fluid">
-              <div className="navbar-header">
+              {/* <div className="navbar-header">
                 <Link to="/" className="navbar-brand">Dad Jokes</Link>
-              </div>
+              </div> */}
               <div>
                 {
                   this.props.loggedIn 

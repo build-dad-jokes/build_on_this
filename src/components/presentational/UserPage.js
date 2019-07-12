@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { fetchAllUsers } from '../../actions';
 import { connect } from 'react-redux';
 import UserList from './UserList'
+import './styles.css'
 
 export class UserPage extends Component {
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Jokes from './Jokes';
 import { fetchAllJokes } from '../../actions';
 import { connect } from 'react-redux';
+import './styles.css'
 
 export class Welcome extends Component {
 

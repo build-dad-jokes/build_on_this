@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { deleteJoke } from '../../actions';
 import Joke from './Joke';
-
+import './styles.css'
 
 export class Jokes extends Component {
     render() {
