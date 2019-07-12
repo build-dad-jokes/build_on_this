@@ -52,7 +52,7 @@ export class AddJoke extends Component {
             <div className="public-toggle">
                   <div className="radio">
                 <label>
-                 <input type="radio" value="option1" checked={true} />
+                 <input type="radio" value="option1" />
                  Public
                </label>
               </div>

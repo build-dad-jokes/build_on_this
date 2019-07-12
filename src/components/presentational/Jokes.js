@@ -10,7 +10,7 @@ export class Jokes extends Component {
       return (
         <div className="jokes-list">
           <h1>JOKES FROM YA DADDY</h1>
-          <ul>
+          <ul className="jokes">
             {this.props.jokes.map(joke => {
               return (
                 <Joke
