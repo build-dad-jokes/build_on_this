@@ -3,7 +3,7 @@ import Jokes from './Jokes';
 import { fetchPublicJokes } from '../../actions';
 import { connect } from 'react-redux';
 import './styles.css'
-import PublicToggle from './PublicToggle';
+
 
 export class Home extends Component {
 

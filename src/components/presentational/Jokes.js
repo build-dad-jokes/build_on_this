@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { deleteJoke } from '../../actions';
 import Joke from './Joke';
 import './styles.css'
-import PublicToggle from './PublicToggle';
+
 
 export class Jokes extends Component {
     render() {
