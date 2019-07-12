@@ -15,7 +15,7 @@ export class NavigationBar extends Component {
 
   render() {
     const userLinks = (
-      <ul>
+      <ul className="nav">
         <li>
           <Link to="/welcome">Jokes</Link>
         </li>
@@ -37,7 +37,7 @@ export class NavigationBar extends Component {
     );
 
     const guestLinks = (
-      <ul>
+      <ul className="nav">
         <li>
           <Link to="/register">Register</Link>
         </li>
