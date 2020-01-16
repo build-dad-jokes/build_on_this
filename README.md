@@ -36,8 +36,7 @@ I wrote the logic in the actions. Just write a reducer for it and pull it from t
 ### 4. Add a radio button or something to have state set the public state to true or false
 Just let the user have an option to have the joke public or not!
 
-### 5. STYLING~~~~~~~ WOOOAooaoOAOA ain't nobody got time fo dat
-I really don't.
+### 5. STYLING
 
 ### 6. If you are up for it, a messaging function!
 
